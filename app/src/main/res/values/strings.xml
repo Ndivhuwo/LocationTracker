@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LocationTracker</string>
+    <string name="start_tracking">Start Tracking</string>
+    <string name="stop_tracking">Stop Tracking</string>
+    <string name="accuracy">Accuracy:</string>
+    <string name="bearing">Bearing:</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="speed">Speed:</string>
+    <string name="time">Time:</string>
+    <string name="clear_data">Clear Data</string>
+    <string name="text_base_url">http://api.connected.topcode.co.za:8091/api/v1/</string>
+</resources>

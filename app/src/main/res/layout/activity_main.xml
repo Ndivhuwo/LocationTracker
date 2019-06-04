@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/tv_start_tracking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_tracking"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:textSize="24sp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:onClick="onStartTrackingClick"
+    />
+
+    <TextView
+            android:id="@+id/tv_stop_tracking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_start_tracking"
+            android:text="@string/stop_tracking"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:textSize="24sp"
+            android:background="@color/colorRed"
+            android:textColor="@color/colorWhite"
+            android:onClick="onStopTrackingClick"
+    />
+
+    <LinearLayout
+            android:id="@+id/llyt_location_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tv_stop_tracking"
+            android:layout_margin="8dp">
+
+        <LinearLayout
+                android:id="@+id/llyt_accuracy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tv_label_accuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/accuracy"/>
+
+            <TextView
+                    android:id="@+id/tv_value_accuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="20sp"
+                    android:text="-"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llyt_bearing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tv_label_bearing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/bearing"/>
+
+            <TextView
+                    android:id="@+id/tv_value_bearing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="20sp"
+                    android:text="-"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llyt_latitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tv_label_latitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/latitude"/>
+
+            <TextView
+                    android:id="@+id/tv_value_latitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="20sp"
+                    android:text="-"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llyt_longitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tv_label_longitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/longitude"/>
+
+            <TextView
+                    android:id="@+id/tv_value_longitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="20sp"
+                    android:text="-"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:id="@+id/llyt_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tv_label_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/speed"/>
+
+            <TextView
+                    android:id="@+id/tv_value_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="20sp"
+                    android:text="-"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llyt_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/tv_label_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/time"/>
+
+            <TextView
+                    android:id="@+id/tv_value_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="20sp"
+                    android:text="-"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/tv_clear_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llyt_location_data"
+            android:text="@string/clear_data"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:padding="16dp"
+            android:textSize="24sp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorWhite"
+            android:onClick="onClearDataClick"
+    />
+
+</RelativeLayout>
