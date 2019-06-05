@@ -6,4 +6,5 @@ import za.co.topcode.locationtracker.model.PositionDto
 interface NetworkManager {
     fun updateLocation(activityId: String?, positionDto: PositionDto?): Observable<Boolean>
     fun clearLocations(activityId: String?) : Observable<Boolean>
+    fun getPositions(activityId: String?): Observable<List<PositionDto>>
 }

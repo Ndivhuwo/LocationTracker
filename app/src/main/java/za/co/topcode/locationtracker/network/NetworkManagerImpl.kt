@@ -14,4 +14,8 @@ class NetworkManagerImpl constructor(private val networkService: NetworkService)
     override fun clearLocations(activityId: String?): Observable<Boolean> {
         return networkService.clearLocations(activityId)
     }
+
+    override fun getPositions(activityId: String?): Observable<List<PositionDto>> {
+        return networkService.getPositions(activityId)
+    }
 }

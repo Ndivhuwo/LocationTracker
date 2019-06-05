@@ -14,4 +14,7 @@ interface NetworkService {
 
     @DELETE("track/open/{activityId}/clear")
     fun clearLocations(@Path("activityId") activityId: String?) : Observable<Boolean>
+
+    @POST("track/open/{activityId}/positions")
+    fun getPositions(@Path("activityId") activityId: String?): Observable<List<PositionDto>>
 }

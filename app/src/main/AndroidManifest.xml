@@ -3,7 +3,7 @@
           xmlns:tools="http://schemas.android.com/tools" package="za.co.topcode.locationtracker">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
@@ -20,8 +20,9 @@
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning"
             tools:targetApi="n">
-        <activity android:name=".MainActivity"
-        android:launchMode="singleTop">
+
+        <activity android:name=".activity.MainActivity"
+                  android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -29,9 +30,19 @@
             </intent-filter>
         </activity>
 
+        <activity
+                android:name=".activity.MapsActivity"
+                android:label="@string/title_activity_maps"
+                android:launchMode="singleTop">
+        </activity>
+
         <service android:name=".service.LocationService"
                  android:label="Location Service">
         </service>
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_maps_key"/>
     </application>
 
 </manifest>

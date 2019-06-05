@@ -17,6 +17,7 @@ import za.co.topcode.locationtracker.R
 import za.co.topcode.locationtracker.network.NetworkManagerImpl
 import za.co.topcode.locationtracker.network.contract.NetworkManager
 import za.co.topcode.locationtracker.network.service.NetworkService
+import java.lang.reflect.Type
 import java.util.*
 import java.util.concurrent.TimeUnit
 
@@ -96,6 +97,10 @@ class GeneralHelper {
 
         fun getObjectFromJson(json: String, classType: Class<*>): Any {
             return provideGson().fromJson(json, classType)
+        }
+
+        fun getObjectFromJsonArray(jsonArray: String, type: Type): Any {
+            return provideGson().fromJson(jsonArray, type)
         }
 
         fun getNetworkManager(context: Context): NetworkManager{

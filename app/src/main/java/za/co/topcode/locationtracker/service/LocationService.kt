@@ -17,8 +17,7 @@ import com.google.android.gms.location.*
 import za.co.topcode.locationtracker.Constants
 import za.co.topcode.locationtracker.util.GeneralHelper
 import android.app.PendingIntent
-import androidx.core.app.NotificationCompat
-import za.co.topcode.locationtracker.MainActivity
+import za.co.topcode.locationtracker.activity.MainActivity
 import za.co.topcode.locationtracker.R
 import za.co.topcode.locationtracker.util.NotificationHandler
 

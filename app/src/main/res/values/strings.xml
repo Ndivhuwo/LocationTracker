@@ -10,4 +10,10 @@
     <string name="time">Time:</string>
     <string name="clear_data">Clear Data</string>
     <string name="text_base_url">http://api.connected.topcode.co.za:8091/api/v1/</string>
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">AIzaSyDFF_isYHGdtRVAus5y3r5QcXKzyYLV1rI</string>
+    <string name="open_map">Open Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="receive_updates">Receive Updates</string>
+    <string name="stop_updates">Stop Updates</string>
+    <string name="exit_map">Exit Map</string>
 </resources>

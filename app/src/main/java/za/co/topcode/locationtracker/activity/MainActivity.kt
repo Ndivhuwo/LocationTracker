@@ -1,4 +1,4 @@
-package za.co.topcode.locationtracker
+package za.co.topcode.locationtracker.activity
 
 import android.Manifest
 import android.content.BroadcastReceiver
@@ -17,6 +17,9 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.HttpException
+import za.co.topcode.locationtracker.Constants
+import za.co.topcode.locationtracker.LocationTrackerApp
+import za.co.topcode.locationtracker.R
 import za.co.topcode.locationtracker.model.PositionDto
 import za.co.topcode.locationtracker.network.contract.NetworkManager
 import za.co.topcode.locationtracker.util.GeneralHelper
@@ -105,6 +108,11 @@ class MainActivity : AppCompatActivity() {
         tv_value_speed.text = "-"
         tv_value_time.text = "-"
         sendClearLocations()
+    }
+
+    fun onOpenMapClick(view: View) {
+        val intent = Intent(this, MapsActivity::class.java)
+        startActivity(intent)
     }
 
     private fun requestLocationUpdates() {
